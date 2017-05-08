@@ -1,3 +1,29 @@
-<div id="category">
-	<p>Here is the category page!!!</p>
+<div class="container category-page" id="category" ng-controller="productController">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Category</h2>
+			<div class="well well-sm">
+				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-9">
+			<div class="row mt-m">
+				<div class="col-sm-3" ng-repeat="product in products track by $index">
+					<div class="img-block mb-m">
+						<img class="img-responsive" ng-src={{product.link}}>
+						<div class="title text-center">
+							Product {{$index+1}}
+						</div>
+						<div class="action-buttons text-center">
+							<a class="wishlist btn btn-info btn-sm" href="">+Wishlist</a>
+							<a class="add-to-cart btn btn-success btn-sm" ng-click="addToCart(product)">+Cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

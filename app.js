@@ -1,8 +1,8 @@
-var app = angular.module("iShop", ["ngRoute"]);
+var app = angular.module("iShop", ["ngRoute","ngStorage"]);
 app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when("/", {
-		templateUrl: "views/home.html"
+		templateUrl: "home.html"
 	})
 	.when("/category", {
 		templateUrl: "views/category.html"
@@ -10,10 +10,10 @@ app.config(function($routeProvider, $locationProvider){
 	.when("/product", {
 		templateUrl: "views/product.html"
 	})
-	/*
 	.when("/cart", {
-		templateUrl: "cart.html"
+		templateUrl: "views/cart.html"
 	})
+	/*
 	.when("/checkout", {
 		templateUrl: "checkout.html"
 	})*/
@@ -23,3 +23,11 @@ app.config(function($routeProvider, $locationProvider){
 	// use the HTML5 History API
     $locationProvider.html5Mode(true);
 })
+
+
+
+
+
+
+
+

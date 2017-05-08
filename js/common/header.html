@@ -1,12 +1,16 @@
-<div id="header" class="header">
+<div id="header" class="header" ng-controller="headerController">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 text-center">
-				<a href="/">
-					<img class="img-responsive logo" src="http://www.logo-designer.co/wp-content/uploads/2013/04/ghost-clothing-fashion-logo-design-branding-Nicolas-Rojas-Leon-calligraphy.jpg">
-				</a>
+			<div class="col-sm-3 col-xs-4">
+				<div id="logo">
+					<div class="d-tc v-center">
+						<a href="/">
+							<img class="img-responsive logo" src="images/store_logo.jpg">
+						</a>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-8 col-xs-8 pt-35">
 				<a class="btn btn-sm btn-default" href="/category">
 					Category
 				</a>
@@ -15,6 +19,9 @@
 				</a>
 				<a class="btn btn-sm btn-default" href="/404">
 					404
+				</a>
+				<a class="btn btn-sm btn-default" href="/cart">
+					Cart ({{cart.length}})
 				</a>
 			</div>
 		</div>
